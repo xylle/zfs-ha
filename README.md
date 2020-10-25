@@ -55,7 +55,7 @@ These external SAS enclosures all feature:
 - Redundant SAS controllers (*I/O modules*) with end-to-end multipathing to accommodate dual-ported SAS disks. ***Dual-ported SAS drives are critical to the success of this design!***
 - SCSI enclosure services (SES) sensors for communication of enclosure component status.
 
-[![HP StorageWorks D2700 25-bay enclosure](http://i.imgur.com/gNwRuCb.png)](http://i.imgur.com/gNwRuCb.png)
+[![HP StorageWorks D2700 25-bay enclosure](screenshot/gNwRuCb.png)](screenshot/gNwRuCb.png)
 
 To complement the shared JBOD enclosure, we need two servers (*head nodes or controllers*) to provide client connectivity and compute/RAM resources for the ZFS array.
 
@@ -82,13 +82,13 @@ Low-cost build manifest for a simple 12TB usable storage array *(under $3.5k)*:
 > - 1 x [Stec ZeusRAM](http://www.ebay.com/sch/i.html?_odkw=zeusram&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR0.TRC0.H0.TRS0&_nkw=zeusram&_sacat=0) SAS DRAM SSD for ZIL/SLOG ($600)
 
 _HP StorageWorks D2600 fully disassembled._
-[![enter image description here](http://i.imgur.com/bTOqqxP.jpg)](http://i.imgur.com/bTOqqxP.jpg)
+[![enter image description here](screenshot/bTOqqxP.jpg)](screenshot/bTOqqxP.jpg)
 
 _Front view of HP ProLiant DL360 G7 head nodes and D2600 JBOD._
-[![enter image description here](http://i.imgur.com/bo790aX.jpg)](http://i.imgur.com/bo790aX.jpg)
+[![enter image description here](screenshot/bo790aX.jpg)](screenshot/bo790aX.jpg)
 
 _Rear view of servers and JBOD with 6G SAS cabling._
-[![enter image description here](http://i.imgur.com/goIxUMr.jpg)](http://i.imgur.com/goIxUMr.jpg)
+[![enter image description here](screenshot/goIxUMr.jpg)](screenshot/goIxUMr.jpg)
 
 Example high-end parts manifest
 -------------------------------
@@ -106,10 +106,10 @@ Build manifest for a 24TB usable storage array using new components *(under $15k
 **Note**: *The ZIL/SLOG device can be mirrored, depending on requirements. I tend to use the Stec ZeusRAM 8GB SSD for this purpose. Failure or wearout are very uncommon due to the nature of the device's architecture. If using a non DRAM-based SSD, it may make sense to mirror the SLOG.* 
 
 _Front view of HP ProLiant DL360p Gen8 head nodes and D3600 JBOD._
-[![enter image description here](http://i.imgur.com/GHXJn5o.jpg)](http://i.imgur.com/GHXJn5o.jpg)
+[![enter image description here](screenshot/GHXJn5o.jpg)](screenshot/GHXJn5o.jpg)
 
 _Rear view of servers and JBOD with 12G SAS cabling._
-[![enter image description here](http://i.imgur.com/CCH7FDn.jpg)](http://i.imgur.com/CCH7FDn.jpg)
+[![enter image description here](screenshot/CCH7FDn.jpg)](screenshot/CCH7FDn.jpg)
 
 ***
 
@@ -127,7 +127,7 @@ The most basic recommended setup between two head nodes and a single JBOD enclos
 > node2 HBA port 2 -> JBOD controller2 port 1  
 
 _Examples of how to scale with multiple enclosures and SAS cabling rings._
-![Oracle SAS cabling diagram](http://i.imgur.com/5bpqh3Z.png)
+![Oracle SAS cabling diagram](screenshot/5bpqh3Z.png)
 
 Cluster configuration
 ---------
@@ -365,7 +365,7 @@ The result:
     	spares
     	  35000c500236031ab    AVAIL
 
-**Note**: *While the above shows a 3 x RAIDZ1 pool, the specifics of the design and layout depend on the application, redundancy and performance requirements. ZFS mirrors or RAID2/3 are always options. For this particular setup though, 9 x 7200 RPM SAS disks in the 3 x 3 setup [consistently outperformed](http://i.imgur.com/SeSlmH8.png) a group of 10 disks arranged in mirrors.*
+**Note**: *While the above shows a 3 x RAIDZ1 pool, the specifics of the design and layout depend on the application, redundancy and performance requirements. ZFS mirrors or RAID2/3 are always options. For this particular setup though, 9 x 7200 RPM SAS disks in the 3 x 3 setup [consistently outperformed](screenshot/SeSlmH8.png) a group of 10 disks arranged in mirrors.*
 
 **Recommended ZFS filesystem settings for EL7.x**
 
@@ -477,7 +477,7 @@ Here's a demonstration of the following actions on the array while a CentOS VMwa
 VMware and the virtual machine are unaffected.
 
 *[Video: ZFS HA Cluster failover under VMware.](https://vimeo.com/178573023)* 
-<a href="https://player.vimeo.com/video/178573023?autoplay=1" target=_blank>![ZFS HA Cluster failover examples under VMware](http://i.imgur.com/dacuzO6.png)</a>
+<a href="https://player.vimeo.com/video/178573023?autoplay=1" target=_blank>![ZFS HA Cluster failover examples under VMware](screenshot/dacuzO6.png)</a>
 
 
 Tuning
@@ -528,4 +528,4 @@ Log on using the `hacluster` account and corresponding password.
 Add the nodes by hostname.
 Most cluster monitoring and management functions are available here, and it's possible to initiate planned failover (for maintenance) using this interface.
 
-[![enter image description here](http://i.imgur.com/iCJ6gls.png)](http://i.imgur.com/iCJ6gls.png)
+[Web Gui](screenshot/iCJ6gls.png)
