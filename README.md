@@ -529,3 +529,4 @@ Add the nodes by hostname.
 Most cluster monitoring and management functions are available here, and it's possible to initiate planned failover (for maintenance) using this interface.
 
 [Web Gui](screenshot/iCJ6gls.png)
+[![Web Gui](screenshot/iCJ6gls.png)](screenshot/gNwRuCb.png)
