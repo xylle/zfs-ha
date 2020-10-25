@@ -18,7 +18,7 @@ ZFS Advantages:
 
 ZFS Downsides:
 
-- *Good* ZFS implementations sometimes require specialized knowledge and [adherence to best practices](http://nex7.blogspot.com/2013/03/readme1st.html).
+- *Good* ZFS implementations sometimes require specialized knowledge and [adherence to best practices](ZFS_README_1ST.md).
 - It's easy to make irreversible mistakes. (often due to poor design or inappropriate hardware choices).
 - There's a lot of contradictory ZFS information online due to the filesystem's appeal to *"home lab"* users.
 - **Options for high availability are costly, tightly associated with commercial storage solutions and may not work well.**
